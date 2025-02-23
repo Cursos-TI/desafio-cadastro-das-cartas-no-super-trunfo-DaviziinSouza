@@ -1,48 +1,44 @@
 #include <stdio.h>
 
-    int main(){
+int main() {
 
-        //Descrição da carta 1
-    int pontoturistico2 = 20;
+    float pontos_turisticos1, pontos_turisticos2, area1, area2, pib1, pib2, populacao1, populacao2;
+    char estado1[20], estado2[20], cidade1[20], cidade2[20], codigo_carta1[20], codigo_carta2[20];
 
-    float populacao2 = 11.45,
-        area2 = 248.219,
-        pib2 = 1.6;
+//cadastro das cartas
+printf("|||| CADASTRE SUA PPRIMEIRA CARTA ||||\n");
+printf("Digite o estado: ");
+scanf("%[^\n]s", estado1);
+printf("Digite o codigo da carta: ");
+scanf("%s", codigo_carta1);
+printf("Digite a cidade: ");
+scanf("%s", cidade1);
+printf("Digite a area: ");
+scanf("%f", &area1);
+printf("Digite a populacao: ");
+scanf("%f", &populacao1);
+printf("Digite os pontos turisticos: ");
+scanf("%f", &pontos_turisticos1);
+printf("Digite o pib: ");
+scanf("%f", &pib1);
+getchar();
 
-    char estado2 [15] = "A",
-        nomecidade2 [15] = "São Paulo",
-        codigocarta2 [5] = "A01"; 
+printf("|||| CADASTRE SUA SEGUNDA CARTA ||||\n");
+printf("Digite o estado: ");
+scanf("%[^\n]s", estado2);
+printf("Digite o codigo da carta: ");
+scanf("%s", codigo_carta2);
+printf("Digite a cidade: ");
+scanf("%s", cidade2);
+printf("Digite a area: ");
+scanf("%f", &area2);
+printf("Digite a populacao: ");
+scanf("%f", &populacao2);
+printf("Digite os pontos turisticos: ");
+scanf("%f", &pontos_turisticos2);
+printf("Digite o pib: ");
+scanf("%f", &pib2);
+getchar();
 
-        printf("---- CARTA 1 ----\n");
-        printf("Estado: %s.\n", estado2);
-        printf("Codigo: %s.\n", codigocarta2);
-        printf("Nome da Cidade: %s.\n", nomecidade2);
-        printf("Populção: %.2f milhões de habitantes.\n", populacao2);
-        printf("Área: %.3f. km².\n", area2);
-        printf("Pib: %.1f Bilhões de Reais\n", pib2);
-        printf("Pontos Turisticos: %d.\n\n", pontoturistico2);
-    
-
-
-    //Descrição da carata 2 
-    int pontoturistico = 30;
-
-    float populacao = 7.24,
-        area = 164.534,
-        pib = 1.1;
-
-    char estado [15] = "B",
-        nomecidade [15] = "Rio de Janeiro",
-        codigocarta [5] = "B02"; 
-
-        printf("---- CARTA 2 ----\n");
-        printf("Estado: %s.\n", estado);
-        printf("Codigo: %s.\n", codigocarta);
-        printf("Nome da Cidade: %s.\n", nomecidade);
-        printf("Populção: %.2f milhões de habitantes.\n", populacao);
-        printf("Área: %.3f. km².\n", area);
-        printf("Pib: %.1f Bilhões de Reais\n", pib);
-        printf("Pontos Turisticos: %d.\n", pontoturistico);
-
-        return 0;
-    }
+return 0;
+}
