@@ -2,10 +2,14 @@
 
 int main() {
 
-    float pontos_turisticos1, pontos_turisticos2, area1, area2, pib1, pib2, populacao1, populacao2, densidade_populacional1, densidade_populacional2, pib_per_capita1, pib_per_capita2;
+    float pontos_turisticos1, pontos_turisticos2, area1, area2, pib1, pib2, densidade_populacional1, densidade_populacional2, pib_per_capita1, pib_per_capita2, inverso1, inverso2, SuperPoder1, SuperPoder2;
+
+    unsigned long int populacao1, populacao2;
+
     char estado1[20], estado2[20], cidade1[20], cidade2[20], codigo_carta1[20], codigo_carta2[20];
 
 //cadastro das primeira carta
+printf("[*****INICO DO JOGO SUPER TRUNFO*****]\n\n");
 printf("|||| CADASTRE SUA PPRIMEIRA CARTA ||||\n\n");
 
 printf("Digite o estado:");
@@ -22,7 +26,7 @@ scanf("%f", &area1);
 getchar();
 
 printf("Digite a populacao: ");
-scanf("%f", &populacao1);
+scanf("%lu", &populacao1);
 getchar();
 
 printf("Digite os pontos turisticos: ");
@@ -35,6 +39,10 @@ getchar();
 
 printf("Densidade demografica: %.2f\n", populacao1 / area1);
 printf("PIB per capita: %.2f\n", pib1 / populacao1);
+
+inverso1 = populacao1 / pib1;
+
+printf("O super poder dessa carta é: %.2f\n", pontos_turisticos1 + area1 + pib1 + populacao1 + pib_per_capita1 + inverso1);
 
 //cadastro da segunda carta
 printf("|||| CADASTRE SUA SEGUNDA CARTA ||||\n\n");
@@ -53,7 +61,7 @@ scanf("%f", &area2);
 getchar();
 
 printf("Digite a populacao: ");
-scanf("%f", &populacao2);
+scanf("%lu", &populacao2);
 getchar();
 
 printf("Digite os pontos turisticos: ");
@@ -66,6 +74,19 @@ getchar();
 
 printf("Densidade demografica: %.2f\n", populacao2 / area2);
 printf("PIB per capita: %.2f\n", pib2 / populacao2);
+
+inverso2 = populacao2 / pib2;
+
+printf("O super poder dessa carta é: %.2f\n", pontos_turisticos2 + area2 + pib2 + populacao2 + pib_per_capita2 + inverso2);
+
+printf("---COMPARAÇÃO ENTRE AS CARTAS---\n\n");
+
+printf("Se o resultado for 1 a primeira carta vence, se for 0 a segunda vence.\n\n");
+printf("População:%d\n", populacao1 > populacao2);
+printf("PIB:%d\n", pib1 > pib2);
+printf("Densidade Populacional:%d\n", densidade_populacional1 > densidade_populacional2);
+printf("PIB per Capita:%d\n", pib_per_capita1 > pib_per_capita2);
+printf("Super Poder:%d\n", SuperPoder1 > SuperPoder2);
 
 return 0;
 }
