@@ -37,12 +37,16 @@ printf("Digite o pib: ");
 scanf("%f", &pib1);
 getchar();
 
-printf("Densidade demografica: %.2f\n", populacao1 / area1);
-printf("PIB per capita: %.2f\n", pib1 / populacao1);
-
+densidade_populacional1 = populacao1 / area1;
+pib_per_capita1 = pib1 / populacao1;
 inverso1 = populacao1 / pib1;
 
-printf("O super poder dessa carta é: %.2f\n", pontos_turisticos1 + area1 + pib1 + populacao1 + pib_per_capita1 + inverso1);
+printf("Densidade demografica: %.2f\n", densidade_populacional1);
+printf("PIB per capita: %.2f\n", pib_per_capita1);
+
+SuperPoder1 = pontos_turisticos1 + area1 + pib1 + populacao1 + pib_per_capita1 + inverso1;
+
+printf("O super poder dessa carta é: %.2f\n", SuperPoder2);
 
 //cadastro da segunda carta
 printf("|||| CADASTRE SUA SEGUNDA CARTA ||||\n\n");
@@ -72,12 +76,16 @@ printf("Digite o pib: ");
 scanf("%f", &pib2);
 getchar();
 
-printf("Densidade demografica: %.2f\n", populacao2 / area2);
-printf("PIB per capita: %.2f\n", pib2 / populacao2);
-
+densidade_populacional2 = populacao2 / area2;
+pib_per_capita2 = pib2 / populacao2;
 inverso2 = populacao2 / pib2;
 
-printf("O super poder dessa carta é: %.2f\n", pontos_turisticos2 + area2 + pib2 + populacao2 + pib_per_capita2 + inverso2);
+printf("Densidade demografica: %.2f\n", densidade_populacional2);
+printf("PIB per capita: %.2f\n", pib_per_capita2);
+
+SuperPoder2 = pontos_turisticos2 + area2 + pib2 + populacao2 + pib_per_capita2 + inverso2;
+
+printf("O super poder dessa carta é: %.2f\n", SuperPoder2);
 
 printf("---COMPARAÇÃO ENTRE AS CARTAS---\n\n");
 
